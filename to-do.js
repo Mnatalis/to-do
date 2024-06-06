@@ -29,6 +29,7 @@ function addTaskToDOM(taskText, completed = false) {
 
   const completeButton = document.createElement("button");
   completeButton.textContent = "Complete";
+  completeButton.classList.add("complete-button");
   completeButton.addEventListener("click", () => {
     li.classList.toggle("completed");
     updateTask(taskText, li.classList.contains("completed"));
